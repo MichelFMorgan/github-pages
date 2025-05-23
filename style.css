@@ -1,34 +1,166 @@
-<!-- style.css -->
 /* Basic styles for Acme Consulting site */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: system-ui, sans-serif; line-height: 1.6; color: #333; background: #f9fafb; }
-header { background: #0f172a; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-header h1 { font-size: 1.5rem; }
-nav ul { list-style: none; display: flex; gap: 1rem; }
-nav a { color: #cbd5e1; text-decoration: none; }
-nav a:hover, nav a.active { color: #fff; }
-.hero { text-align: center; padding: 6rem 1rem; background: linear-gradient(135deg,#2563eb,#1e3a8a); color:#eae9f0; 
-    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9fafb;
+}
+
+header {
+  background: #0f172a;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #eae9f0;
   background-image: url('earth-night-1918.gif');
-  /*background-size: contain; */
-  /*background-size: cover; */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 800px 508px;
-  width: 800px;
-   height: 508px;
-
+  background-size: cover;
 }
-.hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-.hero p { font-size: 1.25rem; margin-bottom: 2rem; }
 
-.cta { background:#f59e0b; color:#fff; padding:0.75rem 1.5rem; border-radius:0.5rem; text-decoration:none; }
-main { padding: 2rem; max-width: 900px; margin: auto; }
-footer { text-align: center; padding: 2rem 1rem; color:#64748b; }
-.project { margin-bottom: 2rem; }
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 1.5rem; }
-iframe { width: 100%; aspect-ratio: 16 / 9; border: none; }
-.contact-form { display: grid; gap: 1rem; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 0.375rem; }
-button { background:#2563eb; color:#fff; padding:0.75rem 1.5rem; border:none; border-radius:0.5rem; cursor:pointer; }
-button:hover { background:#1d4ed8; }
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  background: #f59e0b;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #64748b;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+}
+
+button {
+  background: #2563eb;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    padding: 3rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
